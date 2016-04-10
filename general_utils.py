@@ -1,12 +1,11 @@
 import unicodecsv
 import seaborn as sns
-
+import datetime as dt
 
 def read_csv(filename):
     with open(filename, 'rb') as f:
         reader = unicodecsv.DictReader(f)
         return list(reader)
-
 
 def seaborn_plot(df,plot_type='pairplot',columns=False):
 	sns.set()
@@ -19,3 +18,36 @@ def seaborn_plot(df,plot_type='pairplot',columns=False):
 	sns.plt.show()
 	return
 
+def explore_list(list_name,num_iter):
+	for entry,i in zip(list_name,range(num_iter)):
+		print (entry)
+
+def parse_data_type(data,data_type):
+	if data=='':
+		return None
+	elif data_type=='float':
+		return float(data)
+	elif data_type=='int':
+		return int(data)
+	else:
+		return data
+
+def parse_date(date,date_format): #requires expected date format '%Y-%m-%d'
+	if date=='':
+		return None
+	else:
+		return dt.datetime.strptime(date,date_format)
+
+def convert_csv_entries(csv_list,int_fields,float_fields,date_fields): #Need to add int fields option and func
+	for entry in csv_list:
+		for key,value in entry.items():
+			try:
+				if key in float_fields:
+					entry[key]=parse_data_type(value,'float')
+				elif key in int_fields:
+					entry[key]=parse_data_type(value,'int')
+				elif key in date_fields:
+					entry[key]=parse_date(value)
+			except: #exception handler was added to find out which fields were meant to be floats..
+				print ('error converting: %s' % key)
+	return csv_list

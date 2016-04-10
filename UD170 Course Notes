@@ -6,3 +6,5 @@ Python Sets Data Structure
 - http://www.learnpython.org/en/Sets
 
 
+To delete element:
+- del list_or_dict['key_of_elemenet_to_be_deleted']
