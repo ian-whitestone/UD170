@@ -1,6 +1,10 @@
 import unicodecsv
 import seaborn as sns
 import datetime as dt
+from pandas.tools.plotting import scatter_matrix
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d.axes3d import Axes3D
+import matplotlib as mpl
 
 def read_csv(filename):
     with open(filename, 'rb') as f:

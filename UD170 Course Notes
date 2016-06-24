@@ -8,3 +8,9 @@ Python Sets Data Structure
 
 To delete element:
 - del list_or_dict['key_of_elemenet_to_be_deleted']
+
+
+
+All conclusions you draw in this course will be tentative....you'd have to do a statistical test to determine whether relationship is true or jsut noise...
+
+To differentiate between corellation and causation, need to conduct an A/B test.
