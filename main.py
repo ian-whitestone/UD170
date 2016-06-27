@@ -59,9 +59,6 @@ def get_ranked_dict(corr_dict): #variables with top 5 correlation
 		while i<6: #definitely a better way of doing this..
 		    m = max(vals)
 		    m_int=[i for i, j in enumerate(vals) if j == m][0]
-		    
-		    if year==2001:
-		    	print (ranked_dict[year].keys())
 
 		    if keys[m_int].split('_')[0] not in list(ranked_dict[year].keys()) and \
 		    			keys[m_int].split('_')[0]+'_N' \
@@ -75,27 +72,70 @@ def get_ranked_dict(corr_dict): #variables with top 5 correlation
 	return ranked_dict
 
 
+##INITIALIZING VARIABLES
 normalize_features=['BB','HR','H','SO','SHO','W','L','SV','GS','R']
-df=get_data(normalize_features)
-
 all_vars=['W','L','G','GS','CG','SHO','SV','IPouts','H','ER','HR',
                  'BB','SO','ERA','IBB','WP','HBP','BK','BFP','GF','R']
-feature_vars=[var+'_N' for var in normalize_features]
+start_year=1985 #don't have salary data before '85!
+end_year=2015
 
+
+##BUILD DATASET
+df=get_data(normalize_features)
+feature_vars=[var+'_N' for var in normalize_features]
 df=df[all_vars + [var+'_N' for var in normalize_features]+['yearID','logsalary']]
 
-corr_dict=get_corr_dict(df,2000,2015)
 
+##IDENTIFY CORRELATED VARS
+corr_dict=get_corr_dict(df,start_year,end_year)
 ranked_dict=get_ranked_dict(corr_dict)
 
 
-print ('2014: %s' %ranked_dict[2014])
-print ("\n \n")
-print ('2001: %s' %ranked_dict[2001])
 
+##BUILD NEW DICTS FOR PLOTTING
+all_vars={var:0 for year,vars_ls in ranked_dict.items()
+								for var in vars_ls} #key=var, val=count of occurences
+
+all_vars_timelapse={var:{yr:0 for yr in range(start_year,end_year)} 
+							for year,vars_ls in ranked_dict.items()
+							for var in vars_ls.keys()} #key=var, val={year:rank?}
+
+
+for year,vars_ls in ranked_dict.items():
+	for var in vars_ls.keys():
+		all_vars[var]+=1 #increase count by 1
+		all_vars_timelapse[var][year]=6-ranked_dict[year][var]['rank'] #we want 5 to be high now
+
+plt_df=pd.DataFrame(all_vars_timelapse)
+
+
+###PLOT FEATURE_VAR IMPORTANCE
+##FEATURE_VAR COUNT
+plt.bar(range(len(all_vars)), all_vars.values(), align='center')
+plt.xticks(range(len(all_vars)), all_vars.keys())
+plt.xlabel('Feature Variable')
+plt.ylabel('Frequency')
+plt.title('Variable Impact on Salary Over Time')
+plt.show()
+
+##FEATURE_VAR TIMELAPSE
+
+plt_var='IPouts'
+plt.bar(plt_df.index.values, plt_df[plt_var],facecolor='#9999ff', edgecolor='white')
+plt.ylabel('Variable Rank (5 high - 1 low)')
+plt.title(plt_var + ' Variable Impact on Salary Over Time')
+plt.show()
 
 #Ian:
 #next: find a way to graphically show most impt variables over time...
 
 
+##PLOT 1: x - axis: feature_var y-axis: number of mentions
+
+##PLOT 2-XX [for single feature_var]: x-axis: year-bin y-axis: number of mentions
+
+
+#Ian:
+
+#entirely new approach to this problem: variable importance through classification or clustering??
 
