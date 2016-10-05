@@ -194,7 +194,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[425]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">load_ext</span> autoreload
@@ -224,7 +224,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[426]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">general_utils</span> <span class="k">as</span> <span class="nn">Ugen</span>
@@ -246,7 +246,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[427]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">#GET DATA</span>
@@ -261,7 +261,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[428]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">#EXPLORE DATA</span>
@@ -276,7 +276,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[428]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -442,7 +442,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[429]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">#EXPLORE DATA</span>
@@ -457,7 +457,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[429]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -536,7 +536,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[430]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##FIND WHAT YEARS ARE COVERED</span>
@@ -569,14 +569,12 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[431]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1">#Clean up pitchers data table to eliminate years without salary data</span>
-<span class="n">pitcher_df</span><span class="o">=</span><span class="n">pitcher_df</span><span class="p">[</span><span class="n">pitcher_df</span><span class="p">[</span><span class="s1">&#39;yearID&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1985</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span class="c1">#Clean up batters data table to eliminate years without salary data</span>
 <span class="n">batter_df</span><span class="o">=</span><span class="n">batter_df</span><span class="p">[</span><span class="n">batter_df</span><span class="p">[</span><span class="s1">&#39;yearID&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1985</span><span class="p">]</span>
 
-<span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pitcher_df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
 <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">batter_df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
 <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">salary_df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
 </pre></div>
@@ -591,8 +589,7 @@ salary_df covers 1985-2015
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>19159
-39095
+<pre>39095
 25575
 </pre>
 </div>
@@ -614,7 +611,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[432]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##JOIN DATASETS</span>
@@ -639,7 +636,7 @@ salary_df covers 1985-2015
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[432]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -805,7 +802,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[433]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Investigate size reduction in df (from the original salary_df I was joining on)</span>
@@ -824,7 +821,7 @@ salary_df covers 1985-2015
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[433]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -847,12 +844,87 @@ salary_df covers 1985-2015
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Missing Values</strong>: Next, we check the data for missing values by running df.info()</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[434]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c1">##Check for rows with any missing values</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;
+Int64Index: 24628 entries, 0 to 24627
+Data columns (total 24 columns):
+yearID      24628 non-null int64
+teamID      24628 non-null object
+lgID_x      24628 non-null object
+playerID    24628 non-null object
+salary      24628 non-null int64
+stint       24628 non-null int64
+lgID_y      24628 non-null object
+G           24628 non-null int64
+AB          22751 non-null float64
+R           22751 non-null float64
+H           22751 non-null float64
+2B          22751 non-null float64
+3B          22751 non-null float64
+HR          22751 non-null float64
+RBI         22751 non-null float64
+SB          22751 non-null float64
+CS          22751 non-null float64
+BB          22751 non-null float64
+SO          22751 non-null float64
+IBB         22751 non-null float64
+HBP         22751 non-null float64
+SH          22751 non-null float64
+SF          22751 non-null float64
+GIDP        22751 non-null float64
+dtypes: float64(16), int64(4), object(4)
+memory usage: 4.7+ MB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Comments</strong>: As shown above, all the variables after games (G) have a lower count than the other variables. This indicates that there are missing values present in these columns. This is investigated further below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c1">##this statement prints any row (i.e. player record) with at least one missing values</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -872,7 +944,7 @@ salary_df covers 1985-2015
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[434]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1036,9 +1108,20 @@ salary_df covers 1985-2015
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Comments</strong>: As shown above, there are 1877 player records that contain multiple missing values for variables such as AB, R, RBI etc. This is either due to the fact that these players never recorded any of these statistics, or the data itself is missing. Either way, these records with missing values will not be useful for analysis and may skew the results in some cases.</p>
+<p>As a result, these records will be dropped and removed from any further analysis.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Get rid of rows with NaNs</span>
@@ -1054,7 +1137,7 @@ salary_df covers 1985-2015
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[435]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1069,7 +1152,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[436]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Check if they were dropped</span>
@@ -1092,7 +1175,7 @@ salary_df covers 1985-2015
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[436]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1148,7 +1231,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[437]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Finally, get rid of any batter who never had an at-bat, or didn&#39;t have more than 20 at-bats</span>
@@ -1174,7 +1257,7 @@ salary_df covers 1985-2015
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[437]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[32]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -1198,7 +1281,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[438]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##One of the best ways to start is with the handy built-in pandas function; describe!</span>
@@ -1213,7 +1296,7 @@ salary_df covers 1985-2015
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[438]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -1458,7 +1541,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[439]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">print_dis_stats</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">var</span><span class="p">):</span>
@@ -1473,7 +1556,7 @@ salary_df covers 1985-2015
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[440]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">print_dis_stats</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;salary&#39;</span><span class="p">)</span>
@@ -1728,7 +1811,7 @@ wCIsAAA8QAADAOABAhgAAA8QwAAAeIAABgDAAwQwAAAe+P9PBucbRzDSUQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[441]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;yearID&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;DarkBlue&#39;</span><span class="p">);</span>
@@ -2345,7 +2428,7 @@ wkYAwzAMw0QUNgIYhmEYJqL8f2GJ7PWapTQdAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">percentile</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -2368,7 +2451,7 @@ wkYAwzAMw0QUNgIYhmEYJqL8f2GJ7PWapTQdAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[442]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -2569,7 +2652,7 @@ wkYAwzAMw0QUNgIYhmEYJqL8f2GJ7PWapTQdAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">df_plot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">var</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">):</span>
@@ -2587,7 +2670,7 @@ wkYAwzAMw0QUNgIYhmEYJqL8f2GJ7PWapTQdAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[444]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Total league salaries per year</span>
@@ -2945,7 +3028,7 @@ xqHyQ2rpqQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[445]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Average salary per year</span>
@@ -3280,7 +3363,7 @@ AABgEAwAAIDxB+TPIBuJwoR0AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[446]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##Median salary over time</span>
@@ -3727,7 +3810,7 @@ k4KBiIiImBQMRERExPT/3WB4VBkRL3kAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[447]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;yearID&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2007</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;yearID&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">2012</span><span class="p">)]</span>
@@ -3978,7 +4061,7 @@ WIAABgDAAgQwAAAWIIABALAAAQwAgAX+P72bWAKwSiTjAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[448]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[</span><span class="s1">&#39;logsalary&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -4269,7 +4352,7 @@ QQxoIiIiCfr/0jjzzVyjn4oAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[449]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">team_df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;teamID&#39;</span><span class="p">)[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="nb">sum</span><span class="p">,</span><span class="nb">max</span><span class="p">,</span><span class="nb">min</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">])</span>
@@ -4622,7 +4705,7 @@ f+3WsQAAAADAIH/rfaMoigBgYgAATAwAgAWUpS3Nu2twUAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[450]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">league_df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;lgID_x&#39;</span><span class="p">)[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="nb">sum</span><span class="p">,</span><span class="nb">max</span><span class="p">,</span><span class="nb">min</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">])</span>
@@ -4902,7 +4985,7 @@ AAyCAQAAMAgGAADAIBgAAACDYAAAAIz/D6q6jYjmil5fAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[451]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">df</span><span class="p">[</span><span class="s1">&#39;OBP&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BB&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;IBB&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HBP&#39;</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;AB&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;BB&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;IBB&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HBP&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SF&#39;</span><span class="p">])</span>
@@ -4919,7 +5002,7 @@ AAyCAQAAMAgGAADAIBgAAACDYAAAAIz/D6q6jYjmil5fAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[452]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1">##break up the variables for individual plotting</span>
@@ -9607,7 +9690,7 @@ JfkyTaS7gQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[453]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="nb">vars</span><span class="o">=</span><span class="n">plot_vars_2</span><span class="p">);</span>
@@ -13726,7 +13809,7 @@ pAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[454]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c1"># Make a dataframe with the selected features and the target variable</span>
@@ -14119,7 +14202,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[455]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">Y</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">logsalary</span> 
@@ -14141,7 +14224,7 @@ YII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[455]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
