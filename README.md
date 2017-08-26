@@ -7,4 +7,4 @@ The project was part of Udacity's Data Analyst Nanodegree which I am currently e
 This report starts with a data wrangling phase involving data importing, merging and cleaning. Once prepped, the data is analyzed in the exploration phase and conclusions and suggestions for future studies are presented in the final section.
 
 ## Final Project
-The final submission can be viewed [here](http://htmlpreview.github.io/?https://github.com/ian-whitestone/Udacity-Intro-to-Data-Analysis/blob/master/Ian_Whitestone_UD170%20-%20Data%20Exploration%20-%20Batters.html)
+The final submission can be viewed [here](https://github.com/ian-whitestone/mlb-salaries-eda/blob/master/UD170%20-%20Data%20Exploration%20-%20Batters.ipynb)
